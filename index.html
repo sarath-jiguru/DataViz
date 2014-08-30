@@ -49,13 +49,7 @@ body { margin: 20; padding: 20 }
   	});
 
   	flightPath.setMap(map);
-  	src = dst;
-  	marker1 = new google.maps.Marker({
-        	position: src,
-        	map: map,
-        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=4|00FF00|000000',
-        	title: 'A Number Marker'
-   	});
+
         
   	dst = new google.maps.LatLng(37.773423, -122.215997)
   	marker = new google.maps.Marker({
@@ -64,21 +58,7 @@ body { margin: 20; padding: 20 }
         	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|00FF00|000000',
         	title: 'A Number Marker'
    	});
-   	
-   	
-   	flightPlanCoordinates = [
-    		src,dst	
-   	];
-   	flightPath = new google.maps.Polyline({
-    		path: flightPlanCoordinates,
-    		geodesic: true,
-    		strokeColor: '#FF0000',
-    		strokeOpacity: 1.0,
-    		strokeWeight: 2
-  	});
 
-  	flightPath.setMap(map); 
- 
 
 }
 </script>
