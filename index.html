@@ -28,13 +28,14 @@ body { margin: 20; padding: 20 }
         	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|00FF00|000000',
         	title: 'A Number Marker'
    	});
-   	var marker = new google.maps.Marker({
+   	
+   	var dst = new google.maps.LatLng(37.773323, -122.215897)
+	var marker = new google.maps.Marker({
         	position: dst,
         	map: map,
         	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=4|00FF00|000000',
         	title: 'A Number Marker'
    	});
-        var dst = new google.maps.LatLng(37.773323, -122.215897)
         
         var flightPlanCoordinates = [
     	src,dst	
