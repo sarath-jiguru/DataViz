@@ -21,14 +21,35 @@ body { margin: 20; padding: 20 }
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
 
-        var myLatlng = new google.maps.LatLng(37.286172, -121.80929);
+        var src = new google.maps.LatLng(37.286172, -121.80929);
         var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|00FF00|000000',
-            title: 'A Number Marker'
-        });
-      }
+        	position: src,
+        	map: map,
+        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|00FF00|000000',
+        	title: 'A Number Marker'
+   	});
+   	var marker = new google.maps.Marker({
+        	position: dst,
+        	map: map,
+        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=4|00FF00|000000',
+        	title: 'A Number Marker'
+   	});
+        var dst = new google.maps.LatLng(37.773323, -122.215897)
+        
+        var flightPlanCoordinates = [
+    	src,dst	
+  	];
+	var flightPath = new google.maps.Polyline({
+    		path: flightPlanCoordinates,
+    		geodesic: true,
+    		strokeColor: '#FF0000',
+    		strokeOpacity: 1.0,
+    		strokeWeight: 2
+  	});
+
+  flightPath.setMap(map);
+
+}
 </script>
 </head>
 <body onload="initialize()">
