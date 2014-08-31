@@ -22,7 +22,7 @@ body { margin: 20; padding: 20 }
             mapOptions);
 
 	obj=[{"lat":37.773423,"lon":-122.215997,"count":7},{"lat":37.773323,"lon":-122.215897,"count":4},{"lat":37.773223,"lon":-122.215797,"count":3}]
-        
+        var flightPlanCoordinates = [];
         for (i=0;i<obj.length;i++){
                 latObj=obj[i]['lat'];
                 lonObj=obj[i]['lon'];
@@ -34,9 +34,10 @@ body { margin: 20; padding: 20 }
           		icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|00FF00|000000',
           		title: 'Home'
     		});
+    		flightPlanCoordinates[flightPlanCoordinates.length]=dst;
   
         }
-
+	console.log(flightPlanCoordinates);
 
 }
 </script>
