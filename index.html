@@ -11,6 +11,7 @@ body { margin: 20; padding: 20 }
 	height: 500px;
 }
 </style>
+ <script src="data.json" type="text/javascript"></script>
 <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -21,7 +22,7 @@ body { margin: 20; padding: 20 }
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
 
-	obj=[{"lat":37.773423,"lon":-122.215997,"count":7},{"lat":37.773323,"lon":-122.215897,"count":4},{"lat":37.773223,"lon":-122.215797,"count":3}]
+	//obj=[{"lat":37.773423,"lon":-122.215997,"count":7},{"lat":37.773323,"lon":-122.215897,"count":4},{"lat":37.773223,"lon":-122.215797,"count":3}]
         var flightPlanCoordinates = [];
         for (i=0;i<obj.length;i++){
                 latObj=obj[i]['lat'];
