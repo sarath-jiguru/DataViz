@@ -22,20 +22,7 @@ body { margin: 20; padding: 20 }
             mapOptions);
 
         var src = new google.maps.LatLng(37.773423, -122.215997);
-        var dst = new google.maps.LatLng(37.773323, -122.215897)
-        var marker = new google.maps.Marker({
-        	position: dst,
-        	map: map,
-        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|00FF00|000000',
-        	title: 'A Number Marker'
-   	});
-   	
-   	var marker1 = new google.maps.Marker({
-        	position: src,
-        	map: map,
-        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=4|00FF00|000000',
-        	title: 'A Number Marker'
-   	});
+        var dst = new google.maps.LatLng(37.773323, -122.215897);
         
         var flightPlanCoordinates = [
     	src,dst	
@@ -50,6 +37,23 @@ body { margin: 20; padding: 20 }
 
   	flightPath.setMap(map);
 
+	src = dst
+	dst = new google.maps.LatLng(37.773223, -122.215797);
+	
+	var marker = new google.maps.Marker({
+        	position: dst,
+        	map: map,
+        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=9|00FF00|000000',
+        	title: 'A Number Marker'
+   	});
+   	
+   	var marker1 = new google.maps.Marker({
+        	position: src,
+        	map: map,
+        	icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=12|00FF00|000000',
+        	title: 'A Number Marker'
+   	});
+        
 
 }
 </script>
