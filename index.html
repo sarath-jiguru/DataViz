@@ -44,20 +44,7 @@ body { margin: 20; padding: 20 }
   
         }
         
-        for (i=0;i<_1Obj.length;i++){
-                latObj=_1Obj[i]['lat'];
-                lonObj=_1Obj[i]['lon'];
-                countObj=_1Obj[i]['count'];
-                dst=new google.maps.LatLng(latObj, lonObj);
-                var marker = new google.maps.Marker({
-              position: dst,
-              map: map,
-              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|ed0909|000000',
-              title: 'Home'
-        });
-        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
-  
-        }
+
         
         for (i=0;i<_2Obj.length;i++){
                 latObj=_2Obj[i]['lat'];
