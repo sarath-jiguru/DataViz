@@ -61,35 +61,7 @@ body { margin: 20; padding: 20 }
   
         }
   
-  	for (i=0;i<_3Obj.length;i++){
-                latObj=_3Obj[i]['lat'];
-                lonObj=_3Obj[i]['lon'];
-                countObj=_3Obj[i]['count'];
-                dst=new google.maps.LatLng(latObj, lonObj);
-                var marker = new google.maps.Marker({
-              position: dst,
-              map: map,
-              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|8B8B8B|000000',
-              title: 'Home'
-        });
-        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
-  
-        }
-  
-	for (i=0;i<_4Obj.length;i++){
-                latObj=_4Obj[i]['lat'];
-                lonObj=_4Obj[i]['lon'];
-                countObj=_4Obj[i]['count'];
-                dst=new google.maps.LatLng(latObj, lonObj);
-                var marker = new google.maps.Marker({
-              position: dst,
-              map: map,
-              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|1707f4|000000',
-              title: 'Home'
-        });
-        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
-  
-        }  
+  	
 	console.log(flightPlanCoordinates);
 	
   /*	var flightPath = new google.maps.Polyline({
