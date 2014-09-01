@@ -11,7 +11,12 @@ body { margin: 20; padding: 20 }
 	height: 500px;
 }
 </style>
- <script src="data.json" type="text/javascript"></script>
+ <script src="0.json" type="text/javascript"></script>
+ <script src="1.json" type="text/javascript"></script>
+ <script src="2.json" type="text/javascript"></script>
+ <script src="3.json" type="text/javascript"></script>
+ <script src="4.json" type="text/javascript"></script>
+
 <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -24,10 +29,10 @@ body { margin: 20; padding: 20 }
 	//console.log(data);
 	//obj=[{"lat":37.773423,"lon":-122.215997,"count":7},{"lat":37.773323,"lon":-122.215897,"count":4},{"lat":37.773223,"lon":-122.215797,"count":3}]
         var flightPlanCoordinates = [];
-        for (i=0;i<obj.length;i++){
-                latObj=obj[i]['lat'];
-                lonObj=obj[i]['lon'];
-                countObj=obj[i]['count'];
+        for (i=0;i<0Obj.length;i++){
+                latObj=0Obj[i]['lat'];
+                lonObj=0Obj[i]['lon'];
+                countObj=0Obj[i]['count'];
                 dst=new google.maps.LatLng(latObj, lonObj);
                 var marker = new google.maps.Marker({
           		position: dst,
@@ -38,6 +43,66 @@ body { margin: 20; padding: 20 }
     		flightPlanCoordinates[flightPlanCoordinates.length]=dst;
   
         }
+        
+        for (i=0;i<1Obj.length;i++){
+                latObj=1Obj[i]['lat'];
+                lonObj=1Obj[i]['lon'];
+                countObj=1Obj[i]['count'];
+                dst=new google.maps.LatLng(latObj, lonObj);
+                var marker = new google.maps.Marker({
+              position: dst,
+              map: map,
+              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|ed0909|000000',
+              title: 'Home'
+        });
+        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
+  
+        }
+        
+        for (i=0;i<2Obj.length;i++){
+                latObj=2Obj[i]['lat'];
+                lonObj=2Obj[i]['lon'];
+                countObj=2Obj[i]['count'];
+                dst=new google.maps.LatLng(latObj, lonObj);
+                var marker = new google.maps.Marker({
+              position: dst,
+              map: map,
+              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|070707|000000',
+              title: 'Home'
+        });
+        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
+  
+        }
+  
+  	for (i=0;i<3Obj.length;i++){
+                latObj=3Obj[i]['lat'];
+                lonObj=3Obj[i]['lon'];
+                countObj=3Obj[i]['count'];
+                dst=new google.maps.LatLng(latObj, lonObj);
+                var marker = new google.maps.Marker({
+              position: dst,
+              map: map,
+              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|8B8B8B|000000',
+              title: 'Home'
+        });
+        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
+  
+        }
+  
+	for (i=0;i<4Obj.length;i++){
+                latObj=4Obj[i]['lat'];
+                lonObj=4Obj[i]['lon'];
+                countObj=4Obj[i]['count'];
+                dst=new google.maps.LatLng(latObj, lonObj);
+                var marker = new google.maps.Marker({
+              position: dst,
+              map: map,
+              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|1707f4|000000',
+              title: 'Home'
+        });
+        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
+  
+        }  
 	console.log(flightPlanCoordinates);
 	
   /*	var flightPath = new google.maps.Polyline({
