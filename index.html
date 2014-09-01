@@ -60,20 +60,7 @@ body { margin: 20; padding: 20 }
   
         }
         
-	for (i=0;i<_2Obj.length;i++){
-                latObj=_2Obj[i]['lat'];
-                lonObj=_2Obj[i]['lon'];
-                countObj=_2Obj[i]['count'];
-                dst=new google.maps.LatLng(latObj, lonObj);
-                var marker = new google.maps.Marker({
-              position: dst,
-              map: map,
-              icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+countObj+'|F8BD00|000000',
-              title: '2'
-        });
-        flightPlanCoordinates[flightPlanCoordinates.length]=dst;
-  
-        }
+	
   
 	
   
